@@ -1,35 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-//using System.ComponentModel;
-//using System.Globalization;
-
-//Console.WriteLine("Q01 Enter Two String to compare");
-////1.Write C# Sharp program to demonstrate that the Compare(String, String, Boolean) method is equivalent to using ToUpper or ToLower when comparing strings.
-////Expected Output :
-
-//Console.Write("Enter First One: ");
-//string word_01 = Console.ReadLine(); //enter first string
-//Console.Write("Enter Second One: ");
-//string word_02 = Console.ReadLine(); //enter second string
-
-//if (word_01.ToUpper() == word_02.ToUpper())
-//{
-//    Console.WriteLine("Two strings are equal and Capitalize ");
-//}
-//else if (word_01== word_02)
-//{
-//    Console.WriteLine("Two strings are equal and not case is ignored ");
-//}
-//else
-//{
-//    Console.WriteLine("Two strings are not equal");
-//}
-
-////--------------------------------------------------------
-
-
-
-
-using System;
+﻿using System;
 using System.Globalization;
 
 class Program
