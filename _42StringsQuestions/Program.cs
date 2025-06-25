@@ -232,15 +232,15 @@ class Program
     static void ReverseIntNumber()
     {       
         int number = 0;
-        while (number <= 0)
+        while (number <= 0) //check while negative number
         {
             Console.Write("Enter Positive Int Number: ");
             number = int.Parse(Console.ReadLine());
         }
-        char[] reverse = number.ToString().ToCharArray();
-        Array.Reverse(reverse);
-        string reverseNo = new string(reverse);
-        reverseNo = number.ToString() + reverseNo;
+        char[] reverse = number.ToString().ToCharArray(); //convert number to string 
+        Array.Reverse(reverse); //reverse string
+        string reverseNo = new string(reverse); //make new string from reverse number
+        reverseNo = number.ToString() + reverseNo; //concation orginal and reverse
         Console.WriteLine(reverseNo);
 
     }
