@@ -196,12 +196,12 @@ class Program
 
         Console.Write("Enter SubString to check how many repetion in String: ");
         string substring = Console.ReadLine();
-        int count , searchIndex, startIndex ; //initialize some variable we use
+        int count, searchIndex, startIndex; //initialize some variable we use
         count = searchIndex = startIndex = 0;
 
-        while (true) 
+        while (true)
         {
-            searchIndex = MainString.IndexOf(substring, startIndex, StringComparison.Ordinal);
+            searchIndex = MainString.IndexOf(substring, startIndex);
             if (searchIndex != -1)
             {
                 count++;
@@ -215,5 +215,22 @@ class Program
 
         Console.WriteLine($"SubStrings Appears {count} times in MainString");
     }
+    static void CharPosition()
+    {
+        Console.Write("Enter string to get postions of Chars: ");
+        string charsArray = Console.ReadLine(); //enter  string
+        charsArray = charsArray.Replace(" ", ""); //remove all whitespace
+        charsArray.ToLower(); //convert all chars to lowercase
+        //Console.Write(charsArray);
+        for (int i = 0; i < charsArray.Length; i++)
+        {
+            if (char.IsLetter(charsArray[i])) //check only letters
+            {
+                int postion = charsArray[i] - 'a' + 1;
+                Console.Write($"{postion} ");
+            }
+        }
+    }
+
 }
 
