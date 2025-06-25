@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        CenteryOfYear();
+        PrintRepetationOfChars();
     }
 
     /// <summary>Compares the two sting by culture.</summary>
@@ -129,25 +129,35 @@ class Program
         Console.Write("Enter string to Check Chars Repetions: ");
         string charsArray = Console.ReadLine(); //enter  string
         charsArray = charsArray.Replace(" ", ""); //remove whitespaces 
-        string repetedChars=string.Empty;
+        int count = 1;
+        List<KeyValuePair<char, int>> repetedchars = new List<KeyValuePair<char, int>>();
         for (int i = 0; i < charsArray.Length; i++)
         {
             for (int j = i + 1; j < charsArray.Length; j++)
             {
                 if (charsArray[j] == charsArray[i])
                 {
-                    Console.WriteLine(charsArray[j]);
+                    count++;
+                    repetedchars.Add(new KeyValuePair<char, int>(charsArray[i], count));
                 }
-                
-            }
-        }
-        
-    }
 
+            }
+            count = 1;
+        }
+        var noDuplicateKeys = repetedchars
+    .GroupBy(x => x.Key) // group chars as Groups then Each Group has Count and maybe Two counts then We arrange as Desc after that we get first value
+    .Select(g => g.OrderByDescending(i => i.Value).First()) 
+            .ToList(); 
+        foreach (var item in noDuplicateKeys)
+        {
+            Console.WriteLine($"char: {item.Key}, Frequency: {item.Value}");
+        }
+
+    }
     static void CenteryOfYear()
     {
         Console.Write("Enter Year: ");
-        int _year =int.Parse(Console.ReadLine()); // read year from user
+        int _year = int.Parse(Console.ReadLine()); // read year from user
 
         int century = (_year + 99) / 100; // converting
 
