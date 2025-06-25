@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        PrintRepetationOfChars();
+        FindLargestString();
     }
 
     /// <summary>Compares the two sting by culture.</summary>
@@ -146,8 +146,8 @@ class Program
         }
         var noDuplicateKeys = repetedchars
     .GroupBy(x => x.Key) // group chars as Groups then Each Group has Count and maybe Two counts then We arrange as Desc after that we get first value
-    .Select(g => g.OrderByDescending(i => i.Value).First()) 
-            .ToList(); 
+    .Select(g => g.OrderByDescending(i => i.Value).First())
+            .ToList();
         foreach (var item in noDuplicateKeys)
         {
             Console.WriteLine($"char: {item.Key}, Frequency: {item.Value}");
@@ -162,6 +162,33 @@ class Program
         int century = (_year + 99) / 100; // converting
 
         Console.WriteLine($"Century is {century}");
+    }
+
+    static void FindLargestString()
+    {
+        Console.Write("Enter number of strings that Length of String Array: "); //Determine String Length
+        int StringLength = int.Parse(Console.ReadLine()); //read length from user
+
+        string[] strings = new string[StringLength]; // create array of strings
+
+        //trace on array to enter each string alone
+        for (int i = 0; i < StringLength; i++)
+        {
+            Console.Write($"Enter String No.{i + 1}: ");
+            strings[i] = Console.ReadLine();
+        }
+
+        string LargestString = strings[0];  //suggest that first string is largest one
+
+        foreach (var item in strings)
+        {
+            //trace on strings and compare largest one with other
+            if (item.Length > LargestString.Length)
+            {
+                LargestString = item;
+            }
+        }
+        Console.WriteLine($"Largest String is: {LargestString}"); //print largest one found
     }
 }
 
