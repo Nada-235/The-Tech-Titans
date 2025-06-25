@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        FindLargestString();
+        CountRepetionOfSubString();
     }
 
     /// <summary>Compares the two sting by culture.</summary>
@@ -163,7 +163,6 @@ class Program
 
         Console.WriteLine($"Century is {century}");
     }
-
     static void FindLargestString()
     {
         Console.Write("Enter number of strings that Length of String Array: "); //Determine String Length
@@ -189,6 +188,32 @@ class Program
             }
         }
         Console.WriteLine($"Largest String is: {LargestString}"); //print largest one found
+    }
+    static void CountRepetionOfSubString()
+    {
+        Console.Write("Enter Main String: ");
+        string MainString = Console.ReadLine();
+
+        Console.Write("Enter SubString to check how many repetion in String: ");
+        string substring = Console.ReadLine();
+        int count , searchIndex, startIndex ; //initialize some variable we use
+        count = searchIndex = startIndex = 0;
+
+        while (true) 
+        {
+            searchIndex = MainString.IndexOf(substring, startIndex, StringComparison.Ordinal);
+            if (searchIndex != -1)
+            {
+                count++;
+                startIndex = searchIndex + substring.Length;
+            }
+            else
+            {
+                break;
+            }
+        }
+
+        Console.WriteLine($"SubStrings Appears {count} times in MainString");
     }
 }
 
