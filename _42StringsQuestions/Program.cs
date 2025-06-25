@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        CountRepetionOfSubString();
+        ReverseIntNumber();
     }
 
     /// <summary>Compares the two sting by culture.</summary>
@@ -51,7 +51,6 @@ class Program
                 break;
         }
     }
-
     static void CompareTwoStringUsingLinguistic_Casesensitive_Ordinal()
     {
         Console.Write("Enter First One: ");
@@ -87,7 +86,6 @@ class Program
         }
 
     }
-
     /// <summary>Checks the chars.</summary>
     static void CheckChars()
     {
@@ -231,6 +229,22 @@ class Program
             }
         }
     }
+    static void ReverseIntNumber()
+    {       
+        int number = 0;
+        while (number <= 0)
+        {
+            Console.Write("Enter Positive Int Number: ");
+            number = int.Parse(Console.ReadLine());
+        }
+        char[] reverse = number.ToString().ToCharArray();
+        Array.Reverse(reverse);
+        string reverseNo = new string(reverse);
+        reverseNo = number.ToString() + reverseNo;
+        Console.WriteLine(reverseNo);
+
+    }
+
 
 }
 
