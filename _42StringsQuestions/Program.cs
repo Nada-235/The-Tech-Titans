@@ -11,7 +11,7 @@ class Program
     /// <summary>Compares the two sting by culture.</summary>
     static void CompareTwoStingByCulture()
     {
-
+        //here we enter two strings and compare using culture
         Console.Write("Enter First One: ");
         string word_03 = Console.ReadLine(); //enter first string
         Console.Write("Enter Second One: ");
@@ -53,6 +53,7 @@ class Program
     }
     static void CompareTwoStringUsingLinguistic_Casesensitive_Ordinal()
     {
+        //here we input two string and make compare between them using three methods
         Console.Write("Enter First One: ");
         string word_03 = Console.ReadLine(); //enter first string
         Console.Write("Enter Second One: ");
@@ -89,6 +90,7 @@ class Program
     /// <summary>Checks the chars.</summary>
     static void CheckChars()
     {
+        //here we enter string and check if Chars is Uniqu or not
         Console.Write("Enter string to check chars if unique or not: ");
         string charsArray = Console.ReadLine(); //enter  string
         int flag = 0; //Flag when is identical 
@@ -114,6 +116,7 @@ class Program
     }
     static void CharsToAscII()
     {
+        //here user input string then convert string to ASCII code but format as HexaDecimal
         Console.Write("Enter string to convert to Ascii: ");
         string charsArray = Console.ReadLine(); //enter  string
         for (int i = 0; i < charsArray.Length; i++)
@@ -124,6 +127,7 @@ class Program
     }
     static void PrintRepetationOfChars()
     {
+        //here user input string then find repetion of each chars
         Console.Write("Enter string to Check Chars Repetions: ");
         string charsArray = Console.ReadLine(); //enter  string
         charsArray = charsArray.Replace(" ", ""); //remove whitespaces 
@@ -154,6 +158,7 @@ class Program
     }
     static void CenteryOfYear()
     {
+        //here user input any year as int then find century
         Console.Write("Enter Year: ");
         int _year = int.Parse(Console.ReadLine()); // read year from user
 
@@ -163,6 +168,7 @@ class Program
     }
     static void FindLargestString()
     {
+        //here we create array of string then find largest string using Length
         Console.Write("Enter number of strings that Length of String Array: "); //Determine String Length
         int StringLength = int.Parse(Console.ReadLine()); //read length from user
 
@@ -189,6 +195,7 @@ class Program
     }
     static void CountRepetionOfSubString()
     {
+        //here user input string Main and substring then we check the substring how many times appear
         Console.Write("Enter Main String: ");
         string MainString = Console.ReadLine();
 
@@ -215,6 +222,7 @@ class Program
     }
     static void CharPosition()
     {
+        //here user input string then get postion of each char using ABC postions
         Console.Write("Enter string to get postions of Chars: ");
         string charsArray = Console.ReadLine(); //enter  string
         charsArray = charsArray.Replace(" ", ""); //remove all whitespace
@@ -229,8 +237,9 @@ class Program
             }
         }
     }
+    
     static void ReverseIntNumber()
-    {       
+    {      //here we get number form user and reverse and make concation with its orginal 
         int number = 0;
         while (number <= 0) //check while negative number
         {
@@ -244,6 +253,7 @@ class Program
         Console.WriteLine(reverseNo);
 
     }
+
 
 
 }
