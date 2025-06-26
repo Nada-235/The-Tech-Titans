@@ -1,0 +1,15 @@
+C:\Users\aween\source\The-Tech-Titans\practise-two\practise-two\practise-two\bin\Debug\net8.0\practise-two.exe
+C:\Users\aween\source\The-Tech-Titans\practise-two\practise-two\practise-two\bin\Debug\net8.0\practise-two.deps.json
+C:\Users\aween\source\The-Tech-Titans\practise-two\practise-two\practise-two\bin\Debug\net8.0\practise-two.runtimeconfig.json
+C:\Users\aween\source\The-Tech-Titans\practise-two\practise-two\practise-two\bin\Debug\net8.0\practise-two.dll
+C:\Users\aween\source\The-Tech-Titans\practise-two\practise-two\practise-two\bin\Debug\net8.0\practise-two.pdb
+C:\Users\aween\source\The-Tech-Titans\practise-two\practise-two\practise-two\obj\Debug\net8.0\practise-two.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aween\source\The-Tech-Titans\practise-two\practise-two\practise-two\obj\Debug\net8.0\practise-two.AssemblyInfoInputs.cache
+C:\Users\aween\source\The-Tech-Titans\practise-two\practise-two\practise-two\obj\Debug\net8.0\practise-two.AssemblyInfo.cs
+C:\Users\aween\source\The-Tech-Titans\practise-two\practise-two\practise-two\obj\Debug\net8.0\practise-two.csproj.CoreCompileInputs.cache
+C:\Users\aween\source\The-Tech-Titans\practise-two\practise-two\practise-two\obj\Debug\net8.0\practise-two.sourcelink.json
+C:\Users\aween\source\The-Tech-Titans\practise-two\practise-two\practise-two\obj\Debug\net8.0\practise-two.dll
+C:\Users\aween\source\The-Tech-Titans\practise-two\practise-two\practise-two\obj\Debug\net8.0\refint\practise-two.dll
+C:\Users\aween\source\The-Tech-Titans\practise-two\practise-two\practise-two\obj\Debug\net8.0\practise-two.pdb
+C:\Users\aween\source\The-Tech-Titans\practise-two\practise-two\practise-two\obj\Debug\net8.0\practise-two.genruntimeconfig.cache
+C:\Users\aween\source\The-Tech-Titans\practise-two\practise-two\practise-two\obj\Debug\net8.0\ref\practise-two.dll
