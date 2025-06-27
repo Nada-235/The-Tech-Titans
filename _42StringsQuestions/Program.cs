@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine($"Result of AnagramsStrings: {AnagramsStrings()}");
+        Console.WriteLine($"Result: {ReversTheWordsOfThreeOrMoreCharsLength()}");
     }
 
     /// <summary>Compares the two sting by culture.</summary>
@@ -255,7 +255,7 @@ class Program
     static bool AnagramsStrings()
     {
         //here we check if the two input sting is contain same chars or not
-        Console.Write("Enter First string:");
+        Console.Write("here we check if the two input sting is contain same chars or not \n Enter First string:");
         string _1stString = Console.ReadLine();
         Console.Write("Enter second string:");
         string _2stString = Console.ReadLine();
@@ -276,6 +276,35 @@ class Program
             }
         }
         return true;
+    }
+    static string ReversTheWordsOfThreeOrMoreCharsLength()
+    {
+        //here we check first if string contains digit or special chars also after that check if
+        //length of each substring is 3 or more to reverse it
+        Console.Write("here we check first if string contains digit or special chars also after that check if \n Enter Main string:");
+        string MainString = Console.ReadLine();
+        while (!MainString.All(c => char.IsLetter(c) || c == ' '))
+        {
+            Console.Write("re Enter Main string:");
+            MainString = Console.ReadLine();
+        }
+        string[] spliting = MainString.Split(" ");
+        char[] CharsOfString = null;
+        MainString = string.Empty;
+
+        for (int i = 0; i < spliting.Length; i++)
+        {
+            if (spliting[i].Length >= 3)
+            {
+                CharsOfString = spliting[i].ToCharArray();
+                Array.Reverse(CharsOfString);
+                spliting[i] = new string(CharsOfString);
+                MainString = MainString + " " + spliting[i];
+            }
+            else MainString = MainString + " " + spliting[i];
+        }
+        return MainString;
+
     }
 
 
