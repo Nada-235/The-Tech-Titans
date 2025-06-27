@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        ReverseIntNumber();
+        Console.WriteLine($"Result of AnagramsStrings: {AnagramsStrings()}");
     }
 
     /// <summary>Compares the two sting by culture.</summary>
@@ -237,7 +237,6 @@ class Program
             }
         }
     }
-    
     static void ReverseIntNumber()
     {      //here we get number form user and reverse and make concation with its orginal 
         int number = 0;
@@ -252,6 +251,31 @@ class Program
         reverseNo = number.ToString() + reverseNo; //concation orginal and reverse
         Console.WriteLine(reverseNo);
 
+    }
+    static bool AnagramsStrings()
+    {
+        //here we check if the two input sting is contain same chars or not
+        Console.Write("Enter First string:");
+        string _1stString = Console.ReadLine();
+        Console.Write("Enter second string:");
+        string _2stString = Console.ReadLine();
+        int flag = 0;
+        for (int i = 0; i < _1stString.Length; i++)
+        {
+            //catch first string and trace on chars of second 
+            if (flag == 1)
+            {
+                return false;
+            }
+            for (int j = 0; j < _2stString.Length; j++)
+            {
+                if (!_2stString.Contains(_1stString[i]))
+                {
+                    flag = 1; break;
+                }
+            }
+        }
+        return true;
     }
 
 
