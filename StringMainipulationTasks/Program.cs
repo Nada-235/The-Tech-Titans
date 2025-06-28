@@ -201,6 +201,24 @@ namespace String_mainpulation
             }
         }
 
+        // program to get the longest Palindromic substring from a given string
+        static void LongestPalindromic()
+        {
+
+        }
+
+        //program to reverse a given string in uppercase
+        static void ReverseUppercasestring(String word)
+        {
+            char[] reverse = word.ToUpper().ToCharArray();
+
+            for (int i = reverse.Length-1;i>=0;i--)
+            {
+                Console.Write(reverse[i]);
+            }
+            
+        }
+
 
         static void Main(string[] args)
         {
@@ -215,6 +233,7 @@ namespace String_mainpulation
             //ConcatenateStringArrayValues();
             //IsSubstring();
             //EndsWithDot();
+            ReverseUppercasestring("moosa");
         }
     }
 }
